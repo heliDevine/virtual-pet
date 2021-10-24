@@ -1,7 +1,7 @@
 {
   "name": "virtual-pet",
   "version": "1.0.0",
-  "description": "",
+  "description": "read me test file",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -10,5 +10,13 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heliDevine/virtual-pet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heliDevine/virtual-pet/issues"
+  },
+  "homepage": "https://github.com/heliDevine/virtual-pet#readme"
 }
