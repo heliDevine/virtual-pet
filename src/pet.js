@@ -4,6 +4,12 @@ function Pet(name) {
     this.growUp = function() {
         this.age += 1;
       };
+    this.hunger = 0;
+    this.getHungry = function() {
+      this.growUp += 5;
+    };
+    this.fitness = 10;
+    
 }
 const pet = {};
 
