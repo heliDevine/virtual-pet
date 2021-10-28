@@ -1,19 +1,19 @@
 function Pet(name) {
     this.name = name;
     this.age = 0;
+    this.hunger = 0;
+    this.fitness = 10;
     this.growUp = function() {
         this.age += 1;
+        this.hunger +=5;
+        this.fitness +=3;
       };
-    this.hunger = 0;
-    this.getHungry = function() {
-      this.growUp += 5;
-    };
-    this.fitness = 10;
+    
+    this.walk = function(){
+      this.fitness += 4;
+    }
     
 }
-const pet = {};
-
-pet.name = 'Richard';
 
 module.exports = Pet;
 
