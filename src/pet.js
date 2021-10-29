@@ -17,8 +17,17 @@ function Pet(name) {
     this.fitness = 10;
   }
     }
+    this.feed = function() {
+      if ((this.hunger - 3) >= 0 ){
+        this.hunger -= 3;
+      } else { 
+        this.hunger = 0;
+      }
+
+      }
+    }
     
-}
+
 
 module.exports = Pet;
 
