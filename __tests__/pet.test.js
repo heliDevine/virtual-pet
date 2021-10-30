@@ -88,7 +88,7 @@ describe('constructor', () => {
     });
     it ('returns string "I feel great!" if hunger is 5 or less and fitness is 3 or more ', () => {
       const pet = new Pet('Richard');
-      pet.hunger = 5 && pet.fitnes = 3;
+      pet.hunger = 5 && pet.fitness = 3;
       pet.checkUp()
       expect(pet.hunger(5) && pet.fitness(3)).toBe("I feel great!");
     });
