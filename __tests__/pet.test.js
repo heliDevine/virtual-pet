@@ -87,8 +87,30 @@ describe('constructor', () => {
       const pet = new Pet('Richard');
       pet.hunger = 4; 
       pet.fitness = 4;
-      pet.checkUp()
       expect(pet.checkUp()).toBe("I feel great!");
     });
+
+  it ('returns false if pet fitness is 0 or less', () => {
+    const pet = new Pet('Richard');
+    pet.fitness = 0;
+    expect(pet.isAlive()).toBe(false);
+  });
+  it ('returns false if pet hunger is 10 or more', () => {
+    const pet = new Pet('Richard');
+    pet.hunger = 11;
+    expect(pet.isAlive()).toBe(false);
+  });
+  it ('returns false if pet age is 30 or more', () => {
+    const pet = new Pet('Richard');
+    pet.age = 31;
+    expect(pet.isAlive()).toBe(false);
+  });
+  it ('returns true if pet age is less than 30, pet fitness is more than 0 and hunger is less than 10', () => {
+    const pet = new Pet('Richard');
+    pet.age = 29;
+    pet.fitness = 1;
+    pet.hunger = 9;
+    expect(pet.isAlive()).toBe(true);
+  });
 
   });

@@ -5,6 +5,19 @@ function Pet(name) {
     this.age = 0;
     this.hunger = MINIMUM_HUNGER;
     this.fitness = MAXIMUM_FITNESS;
+
+
+    this.isAlive = function() {
+          
+        return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+      
+    };
+//     Pet.prototype = {
+//       get isAlive() {
+//     return this.age < 30 && this.hunger < 10 && this.fitness > 0;
+//   }
+// };
+    
     this.growUp = function() {
         this.age += 1;
         this.hunger +=5;
