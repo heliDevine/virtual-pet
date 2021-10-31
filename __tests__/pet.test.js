@@ -112,5 +112,15 @@ describe('constructor', () => {
     pet.hunger = 9;
     expect(pet.isAlive()).toBe(true);
   });
-
+  
+  it('throws an error if the pet is not alive', () => {
+    const pet = new Pet('Richard');
+    pet.age = 33;
+    expect(() => pet.feed()).toThrow('Your pet is no longer alive :(');
+  });
+  // it('throws an error if the pet is not alive', () => {
+  //   const pet = new Pet('Richard');
+  //   pet.fitness = 0;
+  //   expect(() => pet.checkUP()).toThrow('Your pet is no longer alive :(');
+  // });
   });
